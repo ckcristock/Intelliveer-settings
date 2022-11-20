@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
+import { LeftMenuComponent } from './modules/left-menu/left-menu.component';
+import { RightMenuComponent } from './modules/right-menu/right-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    LeftMenuComponent,
+    RightMenuComponent
   ],
   imports: [
     BrowserModule,
