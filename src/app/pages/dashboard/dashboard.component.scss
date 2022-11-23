@@ -1,10 +1,33 @@
-$navbar-heigt: 40px;
+$navbar-height: 40px;
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.row>* {
+    padding: 0px !important;
+}
 
 .navbar {
-    height: $navbar-heigt;
+    height: $navbar-height;
     border: 1px solid;
+    padding: 0px;
+    margin: 0px;
 }
 
 .left-menu {
     border: 1px solid;
+    height: calc(100vh - $navbar-height);
+}
+
+.content {
+    border: 1px solid;
+    min-width: none;
+    height: calc(100vh - $navbar-height);
+}
+
+.right-menu {
+    border: 1px solid;
+    height: calc(100vh - $navbar-height);
 }
