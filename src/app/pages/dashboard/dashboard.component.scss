@@ -3,6 +3,7 @@ $navbar-height: 40px;
 * {
     padding: 0px;
     margin: 0px;
+    background-color: black;
 }
 
 .row>* {
@@ -11,7 +12,6 @@ $navbar-height: 40px;
 
 .navbar {
     height: $navbar-height;
-    border: 1px solid;
     padding: 0px;
     margin: 0px;
 }

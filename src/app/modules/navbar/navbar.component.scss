@@ -1,3 +1,14 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar {
     padding: 0px;
     margin: 0px;
@@ -6,4 +17,39 @@
             #eb4b4b,
             rgba(225, 167, 35, 0.91),
             rgba(225, 168, 35, 0.7));
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    .left {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        .wrapper {
+            height: 40px;
+            width: 40px;
+            @include center;
+            background-color: #dc3545;
+        }
+
+        .logo {
+            background-color: white;
+            margin: 0px;
+            height: 40px;
+            @include flex;
+            width: 137px;
+            padding: 0px 10px;
+            justify-content: start;
+
+            img {
+                width: 102px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+            }
+        }
+
+    }
 }
