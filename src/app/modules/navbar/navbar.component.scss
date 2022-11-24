@@ -25,6 +25,7 @@
         display: flex;
         justify-content: start;
         align-items: center;
+        background-color: #cfd0d2;
 
         .wrapper {
             height: 40px;
@@ -48,6 +49,21 @@
                 display: flex;
                 align-items: center;
                 justify-content: start;
+            }
+        }
+
+        .bg-select {
+            margin-left: 0.5px;
+            background-color: white;
+            font-size: 12px;
+            height: 40px;
+            width: 155px;
+            color: #8f9396;
+            border: none;
+            padding: 4.5px 27px 4.5px 9px;
+
+            ::-moz-focus-outer {
+                border: none;
             }
         }
 
