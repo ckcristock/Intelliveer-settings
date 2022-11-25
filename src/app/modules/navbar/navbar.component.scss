@@ -67,5 +67,32 @@
             }
         }
 
+        .search-logo {
+            background-color: white;
+            width: 30px;
+            height: 36px;
+            padding: 4.5px 9px;
+            @include center;
+
+        }
+
+        .search {
+            height: 40px;
+            background-color: white;
+            @include center;
+
+            input:focus {
+                outline: none !important;
+                border: none;
+            }
+        }
+
+        .search-input {
+            border: none;
+            width: 167px;
+            height: 36px;
+            padding: 4.5px 9px;
+        }
+
     }
 }
