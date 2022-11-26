@@ -104,4 +104,22 @@
         }
 
     }
+
+    .right {
+        @include flex;
+        gap: 1.8rem;
+        margin-right: 1.8rem;
+        justify-content: space-between;
+
+        p {
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-weight: 700 !important;
+        }
+
+        svg {
+            color: white;
+        }
+    }
 }
