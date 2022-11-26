@@ -62,9 +62,12 @@
             border: none;
             padding: 4.5px 27px 4.5px 9px;
 
-            ::-moz-focus-outer {
-                border: none;
-            }
+
+
+        }
+
+        select:focus {
+            outline: none !important;
         }
 
         .search-logo {
@@ -92,6 +95,12 @@
             width: 167px;
             height: 36px;
             padding: 4.5px 9px;
+        }
+
+        .down-arrow {
+            height: 40px;
+            width: 40px;
+            @include center;
         }
 
     }
