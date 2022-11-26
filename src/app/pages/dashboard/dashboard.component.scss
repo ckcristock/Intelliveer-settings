@@ -31,3 +31,12 @@ $navbar-height: 40px;
     border: 1px solid;
     height: calc(100vh - $navbar-height);
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+
+    div {
+        border: 1px solid;
+    }
+}
