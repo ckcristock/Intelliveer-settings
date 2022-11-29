@@ -3,7 +3,7 @@ $navbar-height: 40px;
 * {
     padding: 0px;
     margin: 0px;
-    background-color: black;
+    background-color: white;
 }
 
 .row>* {
@@ -16,17 +16,13 @@ $navbar-height: 40px;
     margin: 0px;
 }
 
-.left-menu {
-    border: 1px solid;
-}
+.left-menu {}
 
 .content {
-    border: 1px solid;
     min-width: none;
 }
 
 .right-menu {
-    border: 1px solid;
     margin: 1rem 1rem 1rem 0rem;
 }
 
@@ -37,7 +33,5 @@ $navbar-height: 40px;
     grid-template-columns: 200px 1fr 200px;
     column-gap: 1rem;
 
-    div {
-        border: 1px solid;
-    }
+    div {}
 }
