@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./left-menu.component.scss']
 })
 export class LeftMenuComponent implements OnInit {
+
+  @Output() expanded = new EventEmitter<boolean>();
+  expandedOnLeftMenu: boolean = false;
 
   constructor(
     private router: Router,
@@ -17,6 +20,11 @@ export class LeftMenuComponent implements OnInit {
 
   goToSetting() {
     this.router.navigate(['/dashboard/settings']);
+  }
+
+  sentExpandedToDashboard() {
+    this.expandedOnLeftMenu = !this.expandedOnLeftMenu;
+    this.expanded.emit(this.expandedOnLeftMenu);
   }
 
 }

@@ -14,4 +14,10 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getExpandedFromLeftMenu(msg: boolean) {
+    console.log(msg);
+
+    this.expanded = msg;
+  }
+
 }

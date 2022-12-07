@@ -5,7 +5,7 @@
 <div class="wrapper" [ngStyle]="expanded ? {'grid-template-columns': '200px 1fr 200px'}: 
 {'grid-template-columns': '40px 1fr 75px'}">
     <div class="left-menu">
-        <app-left-menu></app-left-menu>
+        <app-left-menu (expanded)="getExpandedFromLeftMenu($event)"></app-left-menu>
     </div>
     <div class="content">
         <router-outlet></router-outlet>
