@@ -10,12 +10,13 @@
 }
 
 .boxes {
-    @include center;
+    height: calc(100vh - 145px);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
     gap: 1rem;
 
     div {
-        height: 30vh;
-        width: 100%;
         background-color: #f9fafb;
         @include center;
         cursor: pointer;
