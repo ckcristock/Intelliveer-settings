@@ -1,0 +1,31 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes {
+    @include center;
+    gap: 1rem;
+
+    div {
+        height: 30vh;
+        width: 100%;
+        background-color: #f9fafb;
+        @include center;
+        cursor: pointer;
+
+        p {
+            font-size: 2rem;
+            text-align: center;
+            max-width: 200px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+    }
+}
