@@ -125,5 +125,27 @@
         svg {
             color: white;
         }
+
+
+        .bell {
+            margin-top: -6px;
+            @include flex;
+            flex-direction: column;
+
+            .red-circle {
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background-color: red;
+                align-self: flex-end;
+                margin-right: -5px;
+                margin-top: 1px;
+
+                p {
+                    @include center;
+                }
+            }
+        }
+
     }
 }
