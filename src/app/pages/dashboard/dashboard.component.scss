@@ -25,7 +25,11 @@ $navbar-height: 40px;
     align-items: center;
 
     .box {
-        padding: 14px;
+        padding: 10px;
+    }
+
+    p {
+        margin-bottom: 1em;
     }
 
     .router {
