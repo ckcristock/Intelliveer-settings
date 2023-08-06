@@ -20,6 +20,9 @@ $navbar-height: 40px;
 
 .content {
     min-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .right-menu {
