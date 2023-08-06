@@ -5,7 +5,22 @@ import { SettingsComponent } from './settings.component';
 const routes: Routes = [
   {
     path: '', component: SettingsComponent,
-  }
+    children: [
+      {
+        path: '',
+        redirectTo: '',
+        pathMatch: 'full',
+      },
+      {
+        path: 'onboarding',
+        loadChildren: () =>
+          import('../settings/onboarding/onboarding.module').then(
+            (m) => m.OnboardingModule
+          ),
+      },
+    ]
+  },
+
 ];
 
 @NgModule({
