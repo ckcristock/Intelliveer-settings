@@ -10,6 +10,8 @@ export class SettingsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("I'm loaded , i'm settings");
+
   }
 
 }
