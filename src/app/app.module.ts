@@ -8,6 +8,7 @@ import { NavbarComponent } from './modules/navbar/navbar.component';
 import { LeftMenuComponent } from './modules/left-menu/left-menu.component';
 import { RightMenuComponent } from './modules/right-menu/right-menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CreateUpdateComponent } from './modules/create-update/create-update.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     NavbarComponent,
     LeftMenuComponent,
-    RightMenuComponent
+    RightMenuComponent,
+    CreateUpdateComponent
   ],
   imports: [
     BrowserModule,
