@@ -12,13 +12,13 @@ export const onboardingMenuItems = [
 		icon: 'bi bi-house-door',
 	},
 	{
-		id: "PC",
+		id: "LC",
 		title: 'Location',
 		url: '/dashboard/settings/onboarding/location',
 		icon: 'bi bi-house-door',
 	},
 	{
-		id: "LC",
+		id: "PR",
 		title: 'Practice',
 		url: '/dashboard/settings/onboarding/practice',
 		icon: 'bi bi-house-door',

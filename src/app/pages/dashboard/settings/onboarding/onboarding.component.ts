@@ -96,23 +96,51 @@ export class OnboardingComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   selectItem(id: string) {
+    this.data = [];
     this.selectedItem = id;
 
     switch (id) {
       case 'BG':
-        this.selectedItem = id;
+        this.onboarServ.getBGnLE().subscribe((resp: any) => {
+          this.data = resp.results.slice(0, 15);
+          console.log("data:", this.data);
+        });
         break;
       case 'LE':
-        // Ejecutar acción para la opción 2
-        console.log('Opción 2 seleccionada');
-        break;
-      case 'PR':
-        // Ejecutar acción para la opción 3
-        console.log('Opción 3 seleccionada');
+        this.onboarServ.getBGnLE().subscribe((resp: any) => {
+          this.data = resp.results.slice(8, 22);
+          console.log("data:", this.data);
+        });
         break;
       case 'LC':
-        // Ejecutar acción para la opción 3
-        console.log('Opción 3 seleccionada');
+        this.onboarServ.getLCnPR().subscribe((resp: any) => {
+          this.data = resp.results.slice(0, 15);
+          for (let i = 0; i < this.data.length; i++) {
+            if (!this.data[i]['location']) {
+              this.data[i]['location'] = {}; // Crea un objeto 'location' vacío si no existe
+              this.data[i]['origin'] = {};
+            }
+            this.data[i]['location'].name = this.data[i].dimension;
+            this.data[i]['origin'].name = this.data[i].type;
+
+          }
+          console.log("data:", this.data);
+        });
+        break;
+      case 'PR':
+        this.onboarServ.getLCnPR().subscribe((resp: any) => {
+          this.data = resp.results.slice(8, 22);
+          for (let i = 0; i < this.data.length; i++) {
+            if (!this.data[i]['location']) {
+              this.data[i]['location'] = {}; // Crea un objeto 'location' vacío si no existe
+              this.data[i]['origin'] = {};
+            }
+            this.data[i]['location'].name = this.data[i].dimension;
+            this.data[i]['origin'].name = this.data[i].type;
+
+          }
+          console.log("data:", this.data);
+        });
         break;
       default:
         // Acción por defecto si ninguna opción coincide
