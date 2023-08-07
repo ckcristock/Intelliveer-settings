@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 import { NgbDayTemplateData } from '@ng-bootstrap/ng-bootstrap/datepicker/datepicker-view-model';
 import { Subscription } from 'rxjs';
 import { onboardingMenuItems } from './menu';
+import { OnboardingService } from "src/app/services/onboarding.service";
+import { log } from 'console';
 
 @Component({
   selector: 'app-onboarding',
@@ -35,6 +37,7 @@ export class OnboardingComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private router: Router,
     private cdRef: ChangeDetectorRef,
+    private onboarServ: OnboardingService,
   ) {
   }
   ngOnDestroy(): void {
@@ -43,6 +46,10 @@ export class OnboardingComponent implements OnInit, OnDestroy, AfterViewInit {
     this.getOrgBgId();
     this.checkPermission();
     this.onBoardingMenu = onboardingMenuItems;
+    this.onboarServ.getBGnLE().subscribe((resp: any) => {
+      this.data = resp.results;
+      console.log("data:", this.data);
+    });
   }
   ngAfterViewInit() {
     setTimeout(() => {

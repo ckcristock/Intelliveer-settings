@@ -8,7 +8,7 @@ import { BusinessGroupRoutingModule } from './business-group-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    BusinessGroupRoutingModule
+    BusinessGroupRoutingModule,
   ]
 })
 export class BusinessGroupModule { }

@@ -41,25 +41,23 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Contact Person</th>
-                            <th scope="col">Phone no.</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Origin</th>
                             <th scope="col">Created on</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let d of data; let i = index">
-                            <td><span class="pointer" (click)="editBussinessGroup(d?._id)">{{ d?._id
+                            <td><span class="pointer" (click)="editBussinessGroup(d?.id)">{{ d?.id
                                     }}</span></td>
-                            <td><span class="pointer" (click)="editBussinessGroup(d?._id)">{{ d?.name
+                            <td><span class="pointer" (click)="editBussinessGroup(d?.id)">{{ d?.name
                                     }}</span></td>
-                            <td><span class="pointer" (click)="editBussinessGroup(d?._id)">{{
-                                    d?.contactPerson?.firstName }}&nbsp;{{
-                                    d?.contactPerson?.lastName
-                                    }}</span></td>
-                            <td><span class="pointer" (click)="editBussinessGroup(d?._id)">{{
-                                    d?.contactPerson?.phone?.number }}</span></td>
-                            <td><span class="pointer" (click)="editBussinessGroup(d?._id)">{{ d?.createdAt | date:
+                            <td><span class="pointer" (click)="editBussinessGroup(d?.id)">{{
+                                    d?.location?.name }}</span></td>
+                            <td><span class="pointer" (click)="editBussinessGroup(d?.id)">{{
+                                    d?.origin?.name }}</span></td>
+                            <td><span class="pointer" (click)="editBussinessGroup(d?.id)">{{ d?.created | date:
                                     'mediumDate' }}</span></td>
 
                             <td>
@@ -67,26 +65,21 @@
                                     <button class="btn btn-light btn-sm more_btn" ngbDropdownToggle>
                                         <i class="bi bi-three-dots-vertical"></i>
                                     </button>
-                                    <div ngbDropdownMenu>
-                                        <button ngbDropdownItem (click)="navigateTo(d._id, 'legal-entity')">
+                                    <!-- <div ngbDropdownMenu>
+                                        <button ngbDropdownItem (click)="navigateTo(d.id, 'legal-entity')">
                                             Manage Legal Entity
                                         </button>
-                                        <button ngbDropdownItem (click)="navigateTo(d._id, 'location')">
+                                        <button ngbDropdownItem (click)="navigateTo(d.id, 'location')">
                                             Manage Location
                                         </button>
-                                        <button ngbDropdownItem (click)="navigateTo(d._id, 'practice')">
+                                        <button ngbDropdownItem (click)="navigateTo(d.id, 'practice')">
                                             Manage Practice
                                         </button>
                                         <div class="dropdown-divider"></div>
-                                        <!-- <button ngbDropdownItem routerLink="/dashboard/settings/onboarding/business-group/edit/{{
-												d._id
-											}}" *ngIf="bussinessEdit[0].isEnabled">
-											Edit
-										</button> -->
-                                        <button ngbDropdownItem (click)="deleteBG(d._id)">
+                                        <button ngbDropdownItem (click)="deleteBG(d.id)">
                                             Delete
                                         </button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </td>
                         </tr>
