@@ -32,6 +32,7 @@ export class OnboardingComponent implements OnInit, OnDestroy, AfterViewInit {
   bussinessDelete: any;
   onBoardingMenu: any;
   urlSettings!: string;
+  selectedItem: string = "BG";
 
 
   constructor(
@@ -92,6 +93,32 @@ export class OnboardingComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   editBussinessGroup(ID: any) {
+  }
+
+  selectItem(id: string) {
+    this.selectedItem = id;
+
+    switch (id) {
+      case 'BG':
+        this.selectedItem = id;
+        break;
+      case 'LE':
+        // Ejecutar acción para la opción 2
+        console.log('Opción 2 seleccionada');
+        break;
+      case 'PR':
+        // Ejecutar acción para la opción 3
+        console.log('Opción 3 seleccionada');
+        break;
+      case 'LC':
+        // Ejecutar acción para la opción 3
+        console.log('Opción 3 seleccionada');
+        break;
+      default:
+        // Acción por defecto si ninguna opción coincide
+        console.log('Opción no reconocida');
+        break;
+    }
   }
 
 }

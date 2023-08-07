@@ -10,7 +10,8 @@
                 <!-- <li class="pointer" routerLinkActive="active" [routerLink]="item.url">
                     {{ item.title }}
                 </li> -->
-                <li class="pointer" routerLinkActive="active">
+                <li (click)="selectedItem=item.id" class="pointer"
+                    [ngClass]="{'selected-item': item.id === selectedItem}">
                     {{ item.title }}
                 </li>
             </div>
