@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="margin-top: 10px;">
     <div class="col-2">
         <div class="settings-row pointer" routerLink="/dashboard/settings">
             <!-- [routerLink]="urlSettings" -->
@@ -21,13 +21,11 @@
         <div class="container">
             <div class="d-flex justify-content-between call-to-actions">
                 <div class="col-4">
-                    <div class="input-group search_box">
+                    <div class="input-group search_box form-control">
                         <span class="input-group-text border-0 bg-transparent" id="basic-addon1">
                             <i class="bi bi-search"></i>
                         </span>
-                        <input ngbTooltip="For date use format: AAAA-MM-DD" tooltipClass="tooltip-class" type="text"
-                            class="form-control border-0" placeholder="Search" aria-describedby="basic-addon1"
-                            (keyup)="search()" />
+                        <input type="text" placeholder="Search" (keyup)="search()" />
                     </div>
                 </div>
                 <img src="assets/icons/add.svg" alt="" style="height: 30px;
@@ -62,25 +60,10 @@
                                     'mediumDate' }}</span></td>
 
                             <td>
-                                <div ngbDropdown container="body" placement="bottom-end">
+                                <div ngbDropdown container="body" placement="bottom-end" class="three-dots">
                                     <button class="btn btn-light btn-sm more_btn" ngbDropdownToggle>
                                         <i class="bi bi-three-dots-vertical"></i>
                                     </button>
-                                    <!-- <div ngbDropdownMenu>
-                                        <button ngbDropdownItem (click)="navigateTo(d.id, 'legal-entity')">
-                                            Manage Legal Entity
-                                        </button>
-                                        <button ngbDropdownItem (click)="navigateTo(d.id, 'location')">
-                                            Manage Location
-                                        </button>
-                                        <button ngbDropdownItem (click)="navigateTo(d.id, 'practice')">
-                                            Manage Practice
-                                        </button>
-                                        <div class="dropdown-divider"></div>
-                                        <button ngbDropdownItem (click)="deleteBG(d.id)">
-                                            Delete
-                                        </button>
-                                    </div> -->
                                 </div>
                             </td>
                         </tr>

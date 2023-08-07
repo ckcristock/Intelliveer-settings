@@ -45,3 +45,22 @@ ul {
 .selected-item {
     color: #ff4500;
 }
+
+.three-dots {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+    // border: 1px solid;
+}
+
+.form-control {
+    outline: none;
+    border: none;
+
+    input,
+    input:focus {
+        outline: none;
+        border: none;
+    }
+}
