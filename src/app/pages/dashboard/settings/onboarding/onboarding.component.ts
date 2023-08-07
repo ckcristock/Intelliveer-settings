@@ -47,7 +47,7 @@ export class OnboardingComponent implements OnInit, OnDestroy, AfterViewInit {
     this.checkPermission();
     this.onBoardingMenu = onboardingMenuItems;
     this.onboarServ.getBGnLE().subscribe((resp: any) => {
-      this.data = resp.results;
+      this.data = resp.results.slice(0, 15);
       console.log("data:", this.data);
     });
   }
