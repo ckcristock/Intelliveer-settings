@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-2">
-        <div class="settings-row pointer" [routerLink]="urlSettings">
+        <div class="settings-row pointer" routerLink="/dashboard/settings">
             <!-- [routerLink]="urlSettings" -->
-            <i class="bi bi-arrow-left-circle" style="font-size: 2rem" routerLink="/dashboard/settings"></i>
-            <p>Settings menu</p>
+            <i class="bi bi-arrow-left-circle" style="font-size: 2rem"></i>
+            <span>Settings menu</span>
         </div>
         <ul class="ul" style="margin-top: 27px">
             <div *ngFor="let item of onBoardingMenu">
