@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { BusinessGroupRoutingModule } from './business-group-routing.module';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
-
+import { CreateUpdateComponent } from "src/app/modules/create-update/create-update.component";
 
 @NgModule({
   declarations: [
     AddComponent,
-    EditComponent
+    EditComponent,
+    CreateUpdateComponent
   ],
   imports: [
     CommonModule,
