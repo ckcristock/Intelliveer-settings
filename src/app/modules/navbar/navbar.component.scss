@@ -12,11 +12,11 @@
 .navbar {
     padding: 0px;
     margin: 0px;
-    background-image: linear-gradient(to right,
-            rgba(211, 181, 99, 0.35),
-            #eb4b4b,
-            rgba(225, 167, 35, 0.91),
-            rgba(225, 168, 35, 0.7));
+   background-image: linear-gradient(to right,
+    rgba(62, 180, 137, 0.35),   /* Verde menta claro */
+    #3EB489,                    /* Verde menta fuerte */
+    rgba(62, 180, 137, 0.91),   /* Verde menta con más opacidad */
+    rgba(62, 180, 137, 0.7));   /* Verde menta con menor opacidad */
     display: flex;
     align-content: center;
     justify-content: space-between;
